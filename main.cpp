@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "combinatoria.h"
+#include "contagem.h"
 
 int main() {
 	char escolha;

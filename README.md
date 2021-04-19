@@ -1,7 +1,7 @@
 # Combinatoria
 
 ## Recursos Inclusos
-Um script simples para calcular:
+Capacidade de calcular:
 - Permutação Simples
 - Arranjo Simples
 - Combinação Simples

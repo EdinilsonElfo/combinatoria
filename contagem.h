@@ -1,5 +1,5 @@
-#ifndef COMBINATORIA_H
-#define COMBINATORIA_H
+#ifndef CONTAGEM_H
+#define CONTAGEM_H
 
 int fatorial(int n) {
 	int f=1;

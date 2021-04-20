@@ -1,32 +1,56 @@
-#include <stdio.h>
-#include "contagem.h"
+#ifndef CONTAGEM_H
+#define CONTAGEM_H
+#include <math.h>
 
-int main() {
-	char escolha;
-	int n, p, per, arr, com;
-	printf("Digite p para permutacao, a para arranjo ou c para combinacao:\n");
-	scanf("%c", &escolha);
-	switch(escolha){
-		case 'p':
-			printf("Escolhar um valor n para a permutacao:\n");
-			scanf("%d", &n);
-			per = permutacao(n);
-			printf("A permutacao de %d elementos eh: %d\n", n, per);
-			break;
-		case 'a':
-			printf("Escolhar dois valores n e p para o arranjo:\n");
-			scanf("%d%d", &n, &p);
-			arr = arranjo(n, p);
-			printf("O arranjo de %d elementos tomados %d a %d eh: %d\n", n, p, p, arr);
-			break;
-		case 'c':
-			printf("Escolhar dois valores n e p para a combinacao:\n");
-			scanf("%d%d", &n, &p);
-			com = combinacao(n, p);
-			printf("A combinacao de %d elementos tomados %d a %d eh: %d\n", n, p, p, com);
-			break;
-		default:
-			printf("INVALIDO");				
+int fatorial(int n) {
+	int f=1;
+	while(n>0) {
+		f=f*n;
+		n=n-1;
 	}
-	return 0;
+	return f;
 }
+
+int permutacao(int n) {
+	int p=1;
+	p=fatorial(n);
+	return p;
+}
+
+int arranjo(int n, int p) {
+	int a=1;
+	a=permutacao(n)/fatorial(n-p);
+	return a;
+}
+
+int combinacao(int n, int p) {
+	int c=1;
+	c=arranjo(n, p)/permutacao(p);
+	return c;
+}
+
+int per_circular(int n) {
+	int pc=1;
+	pc=fatorial(n-1);
+	return pc;
+}
+
+int per_repeticao(int n) {
+	int pr=1;
+	//Codigo para Permutação com Repetição
+	return pr;
+}
+
+int arr_repeticao(int n, int p) {
+	int ar=1;
+	ar=pow(n, p);
+	return ar;
+}
+
+int com_repeticao(int n, int p) {
+	int cr=1;
+	cr=combinacao(n+p-1, p);
+	return cr;
+}
+
+#endif

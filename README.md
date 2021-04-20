@@ -2,13 +2,10 @@
 
 ## Recursos Inclusos
 Capacidade de calcular:
-- Permutação Simples
-- Arranjo Simples
-- Combinação Simples
-
-## Futuros Planos
-Tentar implementar:
-- Permutação Circular
-- Permutação com Repetição
-- Arranjo com Repetição
-- Combinação com Repetição
+[x] Permutação Simples
+[x] Arranjo Simples
+[x] Combinação Simples
+[] Permutação Circular
+[] Permutação com Repetição
+[] Arranjo com Repetição
+[] Combinação com Repetição
